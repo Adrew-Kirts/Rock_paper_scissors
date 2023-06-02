@@ -1,2 +1,2 @@
 # Rock_paper_scissors
-A simple graphic rock paper scissors game
+## A simple graphic rock paper scissors game written uniquely in JS
