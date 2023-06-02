@@ -1,11 +1,11 @@
+//Rock paper scissors
+
 document.body.style.background = "url('https://hips.hearstapps.com/hmg-prod/images/people-playing-paper-rock-scissors-royalty-free-illustration-1583269312.jpg') no-repeat center";
 
-// 2. Créez dans votre page HTML une section qui contient ces trois images sur une même ligne ;
 let choiceBox = document.createElement("div");
 choiceBox.classList.add("choiceBox");
 choiceBox.style.alignItems = "center";
 document.body.appendChild(choiceBox);
-
 let divContainer = document.getElementsByClassName("choiceBox")[0];
 divContainer.style.display = "flex";
 divContainer.style.justifyContent = "center";
@@ -37,8 +37,6 @@ ciseauxImg.style.marginTop = "100px"
 ciseauxImg.style.border = "solid 10px"
 divContainer.appendChild(ciseauxImg);
 
-// 3. lorsque l'utilisateur clique sur une image, son choix s'affiche dans la console ;
-// 4. Maintenant créez une div avec l'id userChoice, et remplacez le contenu de cette div par le choix de l'utilisateur ;
 let userChoice = document.createElement("div");
 userChoice.id = "userChoice";
 userChoice.style.maxWidth = "200px";
@@ -51,7 +49,6 @@ userChoice.style.marginLeft = "45%"
 userChoice.innerHTML = "&#8593 It's your move! &#8593";
 document.body.appendChild(userChoice);
 
-// 5. Créez une div avec l'id computerChoice et y mettre dedans le choix de l'ordinateur
 let choiceBoxPc = document.createElement("div");
 choiceBoxPc.classList.add("choiceBoxPc");
 choiceBoxPc.id = "computerChoice";
@@ -65,7 +62,6 @@ choiceBoxPc.style.marginLeft = "45%"
 choiceBoxPc.innerText = "Computer's choice";
 document.body.appendChild(choiceBoxPc);
 
-// 6. Ajoutez une div pour afficher le résultat,
 let resultBox = document.createElement("div");
 resultBox.classList.add("resultBox");
 resultBox.id = "resultBox";
@@ -124,29 +120,23 @@ function findWinner(playerChoice, computerChoice) {
     else if (playerChoice == computerChoice) {
         console.log("Tied");
         document.getElementById("resultBox").innerHTML = "<a style=\"color: grey\">You tied</a>";
-
     }
     else if (playerChoice == "rock" && computerChoice == "scissors") {
         console.log("Won");
         document.getElementById("resultBox").innerHTML = "<a style=\"color: green\">You won!</a>";
-
     }
     else if (playerChoice == "paper" && computerChoice == "rock") {
         console.log("Won");
         document.getElementById("resultBox").innerHTML = "<a style=\"color: green\">You won!</a>";;
-
     }
     else if (playerChoice == "scissors" && computerChoice == "paper") {
         console.log("Won");
         document.getElementById("resultBox").innerHTML = "<a style=\"color: green\">You won!</a>";;
-
     }
     else {
         console.log("Lost");
         document.getElementById("resultBox").innerHTML = "<a style=\"color: red\">You lost...</a>";;
-
     }
-
 }
 
 function playGame() {
